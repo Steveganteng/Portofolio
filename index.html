@@ -1,723 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Steven Y.M. Siahaan — Software Engineering Technology student with experience in web development, system design, software testing, databases, and applied machine learning." />
-  <meta name="theme-color" content="#071015" />
-  <title>Steven Y.M. Siahaan | Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Steven Y.M. Siahaan — Software Engineering Technology student with experience in web development, system design, software testing, databases, and applied machine learning." />
+    <meta name="theme-color" content="#071015" />
+    <title>Steven Y.M. Siahaan | Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Keeps the same CSS from the previous portfolio version -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Keeps the same CSS from the previous portfolio version -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <style>
-    /* Hero profile photo addition */
-    .hero-photo-visual {
-      position: relative;
-    }
-
-    .hero-photo-frame {
-      position: relative;
-      z-index: 2;
-      width: min(100%, 480px);
-      height: 540px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      background:
-        radial-gradient(circle at 50% 28%, rgba(126, 249, 180, .16), transparent 34%),
-        linear-gradient(145deg, rgba(126, 249, 180, .06), rgba(76, 201, 240, .035)),
-        var(--panel);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-      isolation: isolate;
-    }
-
-    .hero-photo-frame::before {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      border: 1px solid rgba(126, 249, 180, .22);
-      background: rgba(126, 249, 180, .045);
-      z-index: 0;
-    }
-
-    .hero-photo-frame::after {
-      content: "";
-      position: absolute;
-      inset: auto 10% 0;
-      height: 36%;
-      background: linear-gradient(to top, rgba(5, 13, 17, .28), transparent);
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .hero-photo {
-      position: relative;
-      z-index: 2;
-      width: 108%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center bottom;
-      display: block;
-      filter: drop-shadow(0 24px 32px rgba(0, 0, 0, .24));
-    }
-
-    body.light .hero-photo-frame {
-      background:
-        radial-gradient(circle at 50% 28%, rgba(18, 128, 88, .11), transparent 34%),
-        linear-gradient(145deg, rgba(18, 128, 88, .05), rgba(52, 152, 219, .035)),
-        var(--panel);
-    }
-
-    @media (max-width: 900px) {
-      .hero-photo-frame {
-        width: min(100%, 440px);
-        height: 500px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-photo-visual {
-        min-height: 410px;
-      }
-
-      .hero-photo-frame {
-        width: min(100%, 350px);
-        height: 410px;
-        border-radius: 26px;
-      }
-
-      .hero-photo-frame::before {
-        width: 230px;
-        height: 230px;
-        top: 46px;
-      }
-    }
-  </style>
+    <style>
+        /* Hero profile photo addition */
+        
+        .hero-photo-visual {
+            position: relative;
+        }
+        
+        .hero-photo-frame {
+            position: relative;
+            z-index: 2;
+            width: min(100%, 480px);
+            height: 540px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 34px;
+            background: radial-gradient(circle at 50% 28%, rgba(126, 249, 180, .16), transparent 34%), linear-gradient(145deg, rgba(126, 249, 180, .06), rgba(76, 201, 240, .035)), var(--panel);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+            isolation: isolate;
+        }
+        
+        .hero-photo-frame::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            border: 1px solid rgba(126, 249, 180, .22);
+            background: rgba(126, 249, 180, .045);
+            z-index: 0;
+        }
+        
+        .hero-photo-frame::after {
+            content: "";
+            position: absolute;
+            inset: auto 10% 0;
+            height: 36%;
+            background: linear-gradient(to top, rgba(5, 13, 17, .28), transparent);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .hero-photo {
+            position: relative;
+            z-index: 2;
+            width: 108%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center bottom;
+            display: block;
+            filter: drop-shadow(0 24px 32px rgba(0, 0, 0, .24));
+        }
+        
+        body.light .hero-photo-frame {
+            background: radial-gradient(circle at 50% 28%, rgba(18, 128, 88, .11), transparent 34%), linear-gradient(145deg, rgba(18, 128, 88, .05), rgba(52, 152, 219, .035)), var(--panel);
+        }
+        
+        @media (max-width: 900px) {
+            .hero-photo-frame {
+                width: min(100%, 440px);
+                height: 500px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-photo-visual {
+                min-height: 410px;
+            }
+            .hero-photo-frame {
+                width: min(100%, 350px);
+                height: 410px;
+                border-radius: 26px;
+            }
+            .hero-photo-frame::before {
+                width: 230px;
+                height: 230px;
+                top: 46px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="noise"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
-    <a class="brand" href="#home" aria-label="Back to home">
-      <span class="brand-mark">SS</span>
-      <span class="brand-text">Steven<span>.</span></span>
-    </a>
+    <header class="site-header" id="top">
+        <a class="brand" href="#home" aria-label="Back to home">
+            <span class="brand-mark">SS</span>
+            <span class="brand-text">Steven<span>.</span></span>
+        </a>
 
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
         <svg class="sun" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.64 5.64 4.22 4.22m15.56 15.56-1.42-1.42m0-12.72 1.42-1.42M4.22 19.78l1.42-1.42M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"/>
         </svg>
       </button>
 
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">
         <span></span><span></span>
       </button>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <main>
-    <section class="hero section-shell" id="home">
-      <div class="hero-copy reveal">
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          Open to software engineering opportunities
         </div>
+    </header>
 
-        <p class="eyebrow">SOFTWARE ENGINEER · WEB DEVELOPER</p>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-        <h1>
-          Hi, I’m <span class="gradient-text">Steven Y.M. Siahaan.</span>
-        </h1>
+    <main>
+        <section class="hero section-shell" id="home">
+            <div class="hero-copy reveal">
+                <div class="status-pill">
+                    <span class="status-dot"></span> Open to software engineering opportunities
+                </div>
 
-        <p class="hero-description">
-          I’m a final-year Software Engineering Technology student at Institut Teknologi Del.
-          I have experience in web application development, system analysis, database design,
-          software testing, and applied machine learning through internship and academic projects.
-          I enjoy understanding requirements, developing practical applications, and improving
-          software through testing and iteration.
-        </p>
+                <p class="eyebrow">SOFTWARE ENGINEER · WEB DEVELOPER</p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">
+                <h1>
+                    Hi, I’m <span class="gradient-text">Steven Y.M. Siahaan.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I’m a final-year Software Engineering Technology student at Institut Teknologi Del. I have experience in web application development, system analysis, database design, software testing, and applied machine learning through internship and academic projects.
+                    I enjoy understanding requirements, developing practical applications, and improving software through testing and iteration.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">
             View projects <span>↗</span>
           </a>
-          <a class="btn btn-secondary" href="mailto:stvnsiahaan@gmail.com">
+
+                    <a class="btn btn-secondary" href="cv/CV_Steven_YM_Siahaan.pdf" download="CV_Steven_YM_Siahaan.pdf">
+            Download CV <span>↓</span>
+          </a>
+
+                    <a class="btn btn-secondary" href="mailto:stvnsiahaan@gmail.com">
             Contact me
           </a>
-        </div>
+                </div>
 
-        <div class="quick-stats" aria-label="Quick profile statistics">
-          <div>
-            <strong>3.36</strong>
-            <span>GPA / 4.00</span>
-          </div>
-          <div>
-            <strong>560</strong>
-            <span>TOEFL ITP</span>
-          </div>
-          <div>
-            <strong>5</strong>
-            <span>Selected Projects</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual hero-photo-visual reveal delay-1" aria-label="Steven Y.M. Siahaan profile photo">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-
-        <div class="hero-photo-frame">
-          <img
-            class="hero-photo"
-            src="img/img.png"
-            alt="Steven Y.M. Siahaan"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-
-        <div class="floating-card fc-one">
-          <span>01</span>
-          <strong>Web</strong>
-          <small>Development</small>
-        </div>
-
-        <div class="floating-card fc-two">
-          <span>02</span>
-          <strong>Software</strong>
-          <small>Testing</small>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section-shell section-block" id="about">
-      <div class="section-heading reveal">
-        <p class="section-index">01 / ABOUT</p>
-        <h2>About <span>Me.</span></h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <p>
-            I am a final-year Bachelor of Applied Science student in
-            <strong>Software Engineering Technology</strong> at Institut Teknologi Del.
-            My academic and professional experience covers web development, system and
-            database design, software testing, API testing, and application development.
-          </p>
-
-          <p>
-            During my internship at PT Mandiri Inti Perkasa, I worked on a web-based clinic
-            inventory management system using Laravel and MySQL. I have also completed
-            academic projects in forecasting, image classification, marketplace development,
-            and business website development.
-          </p>
-        </div>
-
-        <div class="about-cards reveal delay-1">
-          <article class="info-card">
-            <span class="mini-label">INTERESTS</span>
-            <h3>Software Development</h3>
-            <p>
-              Web applications, backend development, databases, software testing,
-              system analysis, and practical technology solutions.
-            </p>
-          </article>
-
-          <article class="info-card accent">
-            <span class="mini-label">EDUCATION</span>
-            <h3>Institut Teknologi Del</h3>
-            <p>
-              D4 Software Engineering Technology · Aug 2022 – Oct 2026 (Expected)
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="experience section-shell section-block" id="experience">
-      <div class="section-heading reveal">
-        <p class="section-index">02 / EXPERIENCE</p>
-        <h2>Experience</h2>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span>MAR — DEC 2025</span>
-            <span>JAKARTA</span>
-          </div>
-
-          <div class="timeline-content">
-            <div class="role-top">
-              <div>
-                <h3>Web Developer Intern</h3>
-                <p>PT Mandiri Inti Perkasa</p>
-              </div>
-              <span class="role-chip">Internship</span>
+                <div class="quick-stats" aria-label="Quick profile statistics">
+                    <div>
+                        <strong>3.36</strong>
+                        <span>GPA / 4.00</span>
+                    </div>
+                    <div>
+                        <strong>560</strong>
+                        <span>TOEFL ITP</span>
+                    </div>
+                    <div>
+                        <strong>5</strong>
+                        <span>Selected Projects</span>
+                    </div>
+                </div>
             </div>
 
-            <ul>
-              <li>
-                Analyzed clinic workflows involving medicines, medical equipment,
-                consumables, stock receipt, stock usage, and inventory reporting.
-              </li>
-              <li>
-                Translated operational requirements into application flows,
-                database structures, and web-based system features.
-              </li>
-              <li>
-                Developed and maintained clinic inventory modules using Laravel,
-                PHP, JavaScript, Bootstrap, and MySQL.
-              </li>
-              <li>
-                Worked on item management, medicine receiving, stock management,
-                medicine distribution, storage locations, unit conversion,
-                and reporting functionality.
-              </li>
-              <li>
-                Supported functional testing, debugging, UAT, and application
-                deployment activities.
-              </li>
-            </ul>
+            <div class="hero-visual hero-photo-visual reveal delay-1" aria-label="Steven Y.M. Siahaan profile photo">
+                <div class="orb orb-one"></div>
+                <div class="orb orb-two"></div>
 
-            <div class="tag-row">
-              <span>Laravel</span>
-              <span>PHP</span>
-              <span>JavaScript</span>
-              <span>MySQL</span>
-              <span>Bootstrap</span>
-              <span>Git</span>
+                <div class="hero-photo-frame">
+                    <img class="hero-photo" src="img/img.png" alt="Steven Y.M. Siahaan" loading="eager" decoding="async" />
+                </div>
+
+                <div class="floating-card fc-one">
+                    <span>01</span>
+                    <strong>Web</strong>
+                    <small>Development</small>
+                </div>
+
+                <div class="floating-card fc-two">
+                    <span>02</span>
+                    <strong>Software</strong>
+                    <small>Testing</small>
+                </div>
             </div>
-          </div>
-        </article>
+        </section>
 
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span>AUG — DEC 2024</span>
-            <span>IT DEL</span>
-          </div>
-
-          <div class="timeline-content">
-            <div class="role-top">
-              <div>
-                <h3>Teaching Assistant — English I</h3>
-                <p>Institut Teknologi Del</p>
-              </div>
-              <span class="role-chip muted">Academic</span>
+        <section class="about section-shell section-block" id="about">
+            <div class="section-heading reveal">
+                <p class="section-index">01 / ABOUT</p>
+                <h2>About <span>Me.</span></h2>
             </div>
 
-            <ul>
-              <li>
-                Assisted lecturers in English grammar learning activities and classroom sessions.
-              </li>
-              <li>
-                Supported approximately 64 undergraduate students in understanding
-                course materials and completing learning activities.
-              </li>
-            </ul>
-          </div>
-        </article>
+            <div class="about-grid">
+                <div class="about-copy reveal">
+                    <p>
+                        I am a final-year Bachelor of Applied Science student in
+                        <strong>Software Engineering Technology</strong> at Institut Teknologi Del. My academic and professional experience covers web development, system and database design, software testing, API testing, and application development.
+                    </p>
 
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span>AUG 2024 — AUG 2025</span>
-            <span>IT DEL</span>
-          </div>
+                    <p>
+                        During my internship at PT Mandiri Inti Perkasa, I worked on a web-based clinic inventory management system using Laravel and MySQL. I have also completed academic projects in forecasting, image classification, marketplace development, and business website
+                        development.
+                    </p>
+                </div>
 
-          <div class="timeline-content">
-            <div class="role-top">
-              <div>
-                <h3>Vice Chairman</h3>
-                <p>Software Engineering Student Association</p>
-              </div>
-              <span class="role-chip muted">Leadership</span>
+                <div class="about-cards reveal delay-1">
+                    <article class="info-card">
+                        <span class="mini-label">INTERESTS</span>
+                        <h3>Software Development</h3>
+                        <p>
+                            Web applications, backend development, databases, software testing, system analysis, and practical technology solutions.
+                        </p>
+                    </article>
+
+                    <article class="info-card accent">
+                        <span class="mini-label">EDUCATION</span>
+                        <h3>Institut Teknologi Del</h3>
+                        <p>
+                            D4 Software Engineering Technology · Aug 2022 – Oct 2026 (Expected)
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section-shell section-block" id="experience">
+            <div class="section-heading reveal">
+                <p class="section-index">02 / EXPERIENCE</p>
+                <h2>Experience</h2>
             </div>
 
-            <ul>
-              <li>
-                Coordinated student programs and organizational activities while
-                supporting collaboration and communication among members.
-              </li>
-              <li>
-                Represented Software Engineering students in academic and organizational matters.
-              </li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
+            <div class="timeline">
+                <article class="timeline-item reveal">
+                    <div class="timeline-meta">
+                        <span>MAR — DEC 2025</span>
+                        <span>JAKARTA</span>
+                    </div>
 
-    <section class="projects section-shell section-block" id="projects">
-      <div class="section-heading project-heading reveal">
-        <div>
-          <p class="section-index">03 / PROJECTS</p>
-          <h2>Projects</h2>
-        </div>
-        <p class="section-sidecopy">
-          Projects from my internship and academic work.
-        </p>
-      </div>
+                    <div class="timeline-content">
+                        <div class="role-top">
+                            <div>
+                                <h3>Web Developer Intern</h3>
+                                <p>PT Mandiri Inti Perkasa</p>
+                            </div>
+                            <span class="role-chip">Internship</span>
+                        </div>
 
-      <article class="featured-project reveal">
-        <div class="project-visual">
-          <div class="visual-grid"></div>
+                        <ul>
+                            <li>
+                                Analyzed clinic workflows involving medicines, medical equipment, consumables, stock receipt, stock usage, and inventory reporting.
+                            </li>
+                            <li>
+                                Translated operational requirements into application flows, database structures, and web-based system features.
+                            </li>
+                            <li>
+                                Developed and maintained clinic inventory modules using Laravel, PHP, JavaScript, Bootstrap, and MySQL.
+                            </li>
+                            <li>
+                                Worked on item management, medicine receiving, stock management, medicine distribution, storage locations, unit conversion, and reporting functionality.
+                            </li>
+                            <li>
+                                Supported functional testing, debugging, UAT, and application deployment activities.
+                            </li>
+                        </ul>
 
-          <div class="profile-console">
-            <div class="console-bar">
-              <div class="dots"><i></i><i></i><i></i></div>
-              <span>clinic-inventory.php</span>
-              <span>⌘</span>
+                        <div class="tag-row">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-meta">
+                        <span>AUG — DEC 2024</span>
+                        <span>IT DEL</span>
+                    </div>
+
+                    <div class="timeline-content">
+                        <div class="role-top">
+                            <div>
+                                <h3>Teaching Assistant — English I</h3>
+                                <p>Institut Teknologi Del</p>
+                            </div>
+                            <span class="role-chip muted">Academic</span>
+                        </div>
+
+                        <ul>
+                            <li>
+                                Assisted lecturers in English grammar learning activities and classroom sessions.
+                            </li>
+                            <li>
+                                Supported approximately 64 undergraduate students in understanding course materials and completing learning activities.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-meta">
+                        <span>AUG 2024 — AUG 2025</span>
+                        <span>IT DEL</span>
+                    </div>
+
+                    <div class="timeline-content">
+                        <div class="role-top">
+                            <div>
+                                <h3>Vice Chairman</h3>
+                                <p>Software Engineering Student Association</p>
+                            </div>
+                            <span class="role-chip muted">Leadership</span>
+                        </div>
+
+                        <ul>
+                            <li>
+                                Coordinated student programs and organizational activities while supporting collaboration and communication among members.
+                            </li>
+                            <li>
+                                Represented Software Engineering students in academic and organizational matters.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects section-shell section-block" id="projects">
+            <div class="section-heading project-heading reveal">
+                <div>
+                    <p class="section-index">03 / PROJECTS</p>
+                    <h2>Projects</h2>
+                </div>
+                <p class="section-sidecopy">
+                    Projects from my internship and academic work.
+                </p>
             </div>
 
-            <div class="console-body">
-              <div class="line"><span class="ln">01</span><span><b>module</b> ClinicInventory {</span></div>
-              <div class="line"><span class="ln">02</span><span>&nbsp;&nbsp;items: <em>"Medicine & Medical Equipment"</em>,</span></div>
-              <div class="line"><span class="ln">03</span><span>&nbsp;&nbsp;receiving: <b>true</b>,</span></div>
-              <div class="line"><span class="ln">04</span><span>&nbsp;&nbsp;stockManagement: <b>true</b>,</span></div>
-              <div class="line"><span class="ln">05</span><span>&nbsp;&nbsp;unitConversion: <b>true</b>,</span></div>
-              <div class="line"><span class="ln">06</span><span>&nbsp;&nbsp;reporting: <b>true</b></span></div>
-              <div class="line"><span class="ln">07</span><span>}</span></div>
-            </div>
+            <article class="featured-project reveal">
+                <div class="project-visual">
+                    <div class="visual-grid"></div>
 
-            <div class="stack-strip">
-              <span>Laravel</span>
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>JavaScript</span>
-              <span>Bootstrap</span>
-            </div>
-          </div>
+                    <div class="profile-console">
+                        <div class="console-bar">
+                            <div class="dots"><i></i><i></i><i></i></div>
+                            <span>clinic-inventory.php</span>
+                            <span>⌘</span>
+                        </div>
 
-          <div class="metric-card metric-a">
-            <small>PROJECT TYPE</small>
-            <strong>Internship Project</strong>
-          </div>
+                        <div class="console-body">
+                            <div class="line"><span class="ln">01</span><span><b>module</b> ClinicInventory {</span></div>
+                            <div class="line"><span class="ln">02</span><span>&nbsp;&nbsp;items: <em>"Medicine & Medical Equipment"</em>,</span></div>
+                            <div class="line"><span class="ln">03</span><span>&nbsp;&nbsp;receiving: <b>true</b>,</span></div>
+                            <div class="line"><span class="ln">04</span><span>&nbsp;&nbsp;stockManagement: <b>true</b>,</span></div>
+                            <div class="line"><span class="ln">05</span><span>&nbsp;&nbsp;unitConversion: <b>true</b>,</span></div>
+                            <div class="line"><span class="ln">06</span><span>&nbsp;&nbsp;reporting: <b>true</b></span></div>
+                            <div class="line"><span class="ln">07</span><span>}</span></div>
+                        </div>
 
-          <div class="metric-card metric-b">
-            <small>DOMAIN</small>
-            <strong>Clinic Inventory</strong>
-          </div>
-        </div>
+                        <div class="stack-strip">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
 
-        <div class="project-copy">
-          <span class="project-number">01 · INTERNSHIP PROJECT</span>
+                    <div class="metric-card metric-a">
+                        <small>PROJECT TYPE</small>
+                        <strong>Internship Project</strong>
+                    </div>
 
-          <h3>Clinic Inventory Management System</h3>
+                    <div class="metric-card metric-b">
+                        <small>DOMAIN</small>
+                        <strong>Clinic Inventory</strong>
+                    </div>
+                </div>
 
-          <p>
-            A web-based inventory system developed during my internship at
-            PT Mandiri Inti Perkasa to support medicine, medical equipment,
-            consumable, receiving, stock, and inventory management processes
-            in a clinic environment.
-          </p>
+                <div class="project-copy">
+                    <span class="project-number">01 · INTERNSHIP PROJECT</span>
 
-          <div class="project-points">
-            <div>
-              <strong>Analysis</strong>
-              <span>
+                    <h3>Clinic Inventory Management System</h3>
+
+                    <p>
+                        A web-based inventory system developed during my internship at PT Mandiri Inti Perkasa to support medicine, medical equipment, consumable, receiving, stock, and inventory management processes in a clinic environment.
+                    </p>
+
+                    <div class="project-points">
+                        <div>
+                            <strong>Analysis</strong>
+                            <span>
                 Studied clinic inventory workflows and translated operational
                 needs into functional requirements and application flows.
               </span>
-            </div>
+                        </div>
 
-            <div>
-              <strong>Development</strong>
-              <span>
+                        <div>
+                            <strong>Development</strong>
+                            <span>
                 Developed and maintained modules for medicines, medical
                 equipment, units, categories, locations, receiving, stock,
                 and medicine distribution.
               </span>
-            </div>
+                        </div>
 
-            <div>
-              <strong>Features</strong>
-              <span>
+                        <div>
+                            <strong>Features</strong>
+                            <span>
                 Implemented stock updates, multi-level unit conversion,
                 inventory reporting, Excel import/export, storage-location
                 management, and supporting validation workflows.
               </span>
-            </div>
+                        </div>
 
-            <div>
-              <strong>Testing</strong>
-              <span>
+                        <div>
+                            <strong>Testing</strong>
+                            <span>
                 Performed functional testing, debugging, UAT support,
                 and improvements based on system feedback.
               </span>
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>MySQL</span>
+                        <span>Bootstrap</span>
+                        <span>jQuery</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </article>
+
+            <div class="project-grid">
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <span class="project-number">02</span>
+                        <span class="project-icon">⌁</span>
+                    </div>
+
+                    <h3>Medicine Restock Forecasting & Decision Support System</h3>
+
+                    <p>
+                        Final project that processes historical medicine usage data to estimate future demand and provide inventory recommendations. The system compares Single Exponential Smoothing, Croston, and Syntetos-Boylan Approximation, then converts forecast results into
+                        safety stock, reorder point, and recommended restock quantities.
+                    </p>
+
+                    <div class="tag-row">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Pandas</span>
+                        <span>Forecasting</span>
+                        <span>Excel</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal delay-1">
+                    <div class="project-card-top">
+                        <span class="project-number">03</span>
+                        <span class="project-icon">◉</span>
+                    </div>
+
+                    <h3>Papaya Leaf Disease Identification Using CNN</h3>
+
+                    <p>
+                        Image classification project developed to identify disease conditions in papaya leaves. The project covered dataset preparation, image preprocessing, CNN model training, prediction, and model evaluation.
+                    </p>
+
+                    <div class="tag-row">
+                        <span>Python</span>
+                        <span>CNN</span>
+                        <span>Image Processing</span>
+                        <span>Machine Learning</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <span class="project-number">04</span>
+                        <span class="project-icon">⌘</span>
+                    </div>
+
+                    <h3>Digital Marketplace for Pasar Balige</h3>
+
+                    <p>
+                        Web-based marketplace project developed for traditional-market sellers and buyers. I worked on requirements gathering, system and database design, product listing, transaction functionality, user interaction features, and responsive web implementation.
+                    </p>
+
+                    <div class="tag-row">
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Web Development</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal delay-1">
+                    <div class="project-card-top">
+                        <span class="project-number">05</span>
+                        <span class="project-icon">↗</span>
+                    </div>
+
+                    <h3>Meinoel Keripik Pisang Business Website</h3>
+
+                    <p>
+                        Responsive business website developed to present product information, company profile, and contact information for a local business. The project focused on basic web application structure, responsive layout, and clear presentation of business information.
+                    </p>
+
+                    <div class="tag-row">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                    </div>
+                </article>
             </div>
-          </div>
+        </section>
 
-          <div class="tag-row">
-            <span>Laravel</span>
-            <span>PHP</span>
-            <span>JavaScript</span>
-            <span>MySQL</span>
-            <span>Bootstrap</span>
-            <span>jQuery</span>
-            <span>Git</span>
-          </div>
-        </div>
-      </article>
+        <section class="skills section-shell section-block" id="skills">
+            <div class="section-heading reveal">
+                <p class="section-index">04 / SKILLS</p>
+                <h2>Technical <span>Skills.</span></h2>
+            </div>
 
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="project-card-top">
-            <span class="project-number">02</span>
-            <span class="project-icon">⌁</span>
-          </div>
+            <div class="skills-grid">
+                <article class="skill-panel reveal">
+                    <div class="skill-icon">&lt;/&gt;</div>
+                    <h3>Programming Languages</h3>
+                    <p>PHP · JavaScript · Python · Java · C · Kotlin · SQL</p>
+                </article>
 
-          <h3>Medicine Restock Forecasting & Decision Support System</h3>
+                <article class="skill-panel reveal delay-1">
+                    <div class="skill-icon">▦</div>
+                    <h3>Frameworks & Libraries</h3>
+                    <p>
+                        Laravel · Node.js · Vue.js · Angular · Flask · Flutter · .NET · Bootstrap · Tailwind CSS
+                    </p>
+                </article>
 
-          <p>
-            Final project that processes historical medicine usage data to estimate
-            future demand and provide inventory recommendations. The system compares
-            Single Exponential Smoothing, Croston, and Syntetos-Boylan Approximation,
-            then converts forecast results into safety stock, reorder point, and
-            recommended restock quantities.
-          </p>
+                <article class="skill-panel reveal">
+                    <div class="skill-icon">◫</div>
+                    <h3>Database & Applied Computing</h3>
+                    <p>
+                        MySQL · MongoDB · Pandas · Jupyter Notebook · Tableau · Machine Learning · Data Processing
+                    </p>
+                </article>
 
-          <div class="tag-row">
-            <span>Python</span>
-            <span>Flask</span>
-            <span>Pandas</span>
-            <span>Forecasting</span>
-            <span>Excel</span>
-          </div>
-        </article>
+                <article class="skill-panel reveal delay-1">
+                    <div class="skill-icon">✓</div>
+                    <h3>Software Engineering & QA</h3>
+                    <p>
+                        Requirements Analysis · System Design · Database Design · SDLC · STLC · Manual Testing · Functional Testing · Regression Testing · UAT
+                    </p>
+                </article>
 
-        <article class="project-card reveal delay-1">
-          <div class="project-card-top">
-            <span class="project-number">03</span>
-            <span class="project-icon">◉</span>
-          </div>
+                <article class="skill-panel reveal">
+                    <div class="skill-icon">⌁</div>
+                    <h3>Tools</h3>
+                    <p>
+                        Git · GitHub · Jira · Trello · Bitrix · Postman · Swagger/OpenAPI · Visual Studio Code · Android Studio
+                    </p>
+                </article>
 
-          <h3>Papaya Leaf Disease Identification Using CNN</h3>
+                <article class="skill-panel reveal delay-1">
+                    <div class="skill-icon">◎</div>
+                    <h3>Development Practices</h3>
+                    <p>
+                        Agile · Scrum · Waterfall · API Testing · Debugging · Deployment Support · Team Collaboration
+                    </p>
+                </article>
+            </div>
+        </section>
 
-          <p>
-            Image classification project developed to identify disease conditions
-            in papaya leaves. The project covered dataset preparation, image
-            preprocessing, CNN model training, prediction, and model evaluation.
-          </p>
+        <section class="credential section-shell section-block">
+            <div class="credential-card reveal">
+                <div>
+                    <span class="mini-label">CERTIFICATION</span>
+                    <h2>Junior Web Programmer</h2>
+                    <p>
+                        Digital Talent Scholarship — Vocational School Graduate Academy
+                    </p>
+                </div>
 
-          <div class="tag-row">
-            <span>Python</span>
-            <span>CNN</span>
-            <span>Image Processing</span>
-            <span>Machine Learning</span>
-          </div>
-        </article>
+                <div class="credential-mark">
+                    DTS<span>↗</span>
+                </div>
+            </div>
+        </section>
 
-        <article class="project-card reveal">
-          <div class="project-card-top">
-            <span class="project-number">04</span>
-            <span class="project-icon">⌘</span>
-          </div>
+        <section class="contact section-shell section-block" id="contact">
+            <div class="contact-panel reveal">
+                <div class="contact-copy">
+                    <p class="section-index">05 / CONTACT</p>
+                    <h2>Contact</h2>
 
-          <h3>Digital Marketplace for Pasar Balige</h3>
+                    <p>
+                        I am open to opportunities related to software engineering, web development, backend development, software testing, and other technology roles that match my experience.
+                    </p>
+                </div>
 
-          <p>
-            Web-based marketplace project developed for traditional-market sellers
-            and buyers. I worked on requirements gathering, system and database
-            design, product listing, transaction functionality, user interaction
-            features, and responsive web implementation.
-          </p>
+                <div class="contact-actions">
+                    <a class="contact-link" href="mailto:stvnsiahaan@gmail.com">
+                        <span>Email</span>
+                        <strong>stvnsiahaan@gmail.com</strong>
+                        <i>↗</i>
+                    </a>
 
-          <div class="tag-row">
-            <span>Laravel</span>
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>Web Development</span>
-          </div>
-        </article>
+                    <a class="contact-link" href="https://linkedin.com/in/steven-y-m-siahaan-97bb74262" target="_blank" rel="noopener noreferrer">
+                        <span>LinkedIn</span>
+                        <strong>Steven Y.M. Siahaan</strong>
+                        <i>↗</i>
+                    </a>
 
-        <article class="project-card reveal delay-1">
-          <div class="project-card-top">
-            <span class="project-number">05</span>
-            <span class="project-icon">↗</span>
-          </div>
+                    <a class="contact-link" href="tel:+6289630796117">
+                        <span>Phone</span>
+                        <strong>+62 896-3079-6117</strong>
+                        <i>↗</i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-          <h3>Meinoel Keripik Pisang Business Website</h3>
+    <footer class="site-footer section-shell">
+        <a class="brand" href="#top">
+            <span class="brand-mark">SS</span>
+            <span class="brand-text">Steven<span>.</span></span>
+        </a>
 
-          <p>
-            Responsive business website developed to present product information,
-            company profile, and contact information for a local business. The project
-            focused on basic web application structure, responsive layout, and clear
-            presentation of business information.
-          </p>
+        <p>
+            Steven Y.M. Siahaan · <span id="year"></span>
+        </p>
 
-          <div class="tag-row">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>PHP</span>
-          </div>
-        </article>
-      </div>
-    </section>
+        <a href="#top" class="back-top">Back to top ↑</a>
+    </footer>
 
-    <section class="skills section-shell section-block" id="skills">
-      <div class="section-heading reveal">
-        <p class="section-index">04 / SKILLS</p>
-        <h2>Technical <span>Skills.</span></h2>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-panel reveal">
-          <div class="skill-icon">&lt;/&gt;</div>
-          <h3>Programming Languages</h3>
-          <p>PHP · JavaScript · Python · Java · C · Kotlin · SQL</p>
-        </article>
-
-        <article class="skill-panel reveal delay-1">
-          <div class="skill-icon">▦</div>
-          <h3>Frameworks & Libraries</h3>
-          <p>
-            Laravel · Node.js · Vue.js · Angular · Flask · Flutter · .NET ·
-            Bootstrap · Tailwind CSS
-          </p>
-        </article>
-
-        <article class="skill-panel reveal">
-          <div class="skill-icon">◫</div>
-          <h3>Database & Applied Computing</h3>
-          <p>
-            MySQL · MongoDB · Pandas · Jupyter Notebook · Tableau ·
-            Machine Learning · Data Processing
-          </p>
-        </article>
-
-        <article class="skill-panel reveal delay-1">
-          <div class="skill-icon">✓</div>
-          <h3>Software Engineering & QA</h3>
-          <p>
-            Requirements Analysis · System Design · Database Design · SDLC · STLC ·
-            Manual Testing · Functional Testing · Regression Testing · UAT
-          </p>
-        </article>
-
-        <article class="skill-panel reveal">
-          <div class="skill-icon">⌁</div>
-          <h3>Tools</h3>
-          <p>
-            Git · GitHub · Jira · Trello · Bitrix · Postman · Swagger/OpenAPI ·
-            Visual Studio Code · Android Studio
-          </p>
-        </article>
-
-        <article class="skill-panel reveal delay-1">
-          <div class="skill-icon">◎</div>
-          <h3>Development Practices</h3>
-          <p>
-            Agile · Scrum · Waterfall · API Testing · Debugging ·
-            Deployment Support · Team Collaboration
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="credential section-shell section-block">
-      <div class="credential-card reveal">
-        <div>
-          <span class="mini-label">CERTIFICATION</span>
-          <h2>Junior Web Programmer</h2>
-          <p>
-            Digital Talent Scholarship — Vocational School Graduate Academy
-          </p>
-        </div>
-
-        <div class="credential-mark">
-          DTS<span>↗</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section-shell section-block" id="contact">
-      <div class="contact-panel reveal">
-        <div class="contact-copy">
-          <p class="section-index">05 / CONTACT</p>
-          <h2>Contact</h2>
-
-          <p>
-            I am open to opportunities related to software engineering,
-            web development, backend development, software testing,
-            and other technology roles that match my experience.
-          </p>
-        </div>
-
-        <div class="contact-actions">
-          <a class="contact-link" href="mailto:stvnsiahaan@gmail.com">
-            <span>Email</span>
-            <strong>stvnsiahaan@gmail.com</strong>
-            <i>↗</i>
-          </a>
-
-          <a
-            class="contact-link"
-            href="https://linkedin.com/in/steven-y-m-siahaan-97bb74262"
-            target="_blank"
-            rel="noopener noreferrer">
-            <span>LinkedIn</span>
-            <strong>Steven Y.M. Siahaan</strong>
-            <i>↗</i>
-          </a>
-
-          <a class="contact-link" href="tel:+6289630796117">
-            <span>Phone</span>
-            <strong>+62 896-3079-6117</strong>
-            <i>↗</i>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer section-shell">
-    <a class="brand" href="#top">
-      <span class="brand-mark">SS</span>
-      <span class="brand-text">Steven<span>.</span></span>
-    </a>
-
-    <p>
-      Steven Y.M. Siahaan · <span id="year"></span>
-    </p>
-
-    <a href="#top" class="back-top">Back to top ↑</a>
-  </footer>
-
-  <!-- Keeps the same JavaScript from the previous portfolio version -->
-  <script src="script.js"></script>
+    <!-- Keeps the same JavaScript from the previous portfolio version -->
+    <script src="script.js"></script>
 </body>
+
 </html>
